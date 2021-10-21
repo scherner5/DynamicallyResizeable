@@ -21,7 +21,7 @@ int main()
 	/**for (int i = 0; i < object.length(); i++) { // prints "5, 10" onto screen
 		printf("%i", object[i]);
 		(i + 1 == object.length()) ? printf("\n") : printf(", ");
-	}**/
-
+	}
+	**/
 }
 		

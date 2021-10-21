@@ -13,11 +13,11 @@ DynamicList<j>::DynamicList()
 template <class j>
 void DynamicList<j>::push(j x) {
 	if (*list > counter) {
-		*list[counter] = x;
+		*list[counter] = *x;
 		counter++;
 	}
 	else {
-		break;
+		return;
 	}
 }
 
