@@ -8,12 +8,13 @@ template <class j>
 DynamicList<j>::DynamicList()
 {
 	counter = 0;
+	list = new j[2];
 }
 
 template <class j>
 void DynamicList<j>::push(j x) {
 	if (*list > counter) {
-		*list[counter] = *x;
+		(*list)[counter] = x;
 		counter++;
 	}
 	else {
