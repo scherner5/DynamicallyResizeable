@@ -8,17 +8,27 @@ template <class j>
 DynamicList<j>::DynamicList()
 {
 	counter = 0;
-	list = new j[2];
+	list = new j[8];
+	listSize = 8;
 }
 
 template <class j>
 void DynamicList<j>::push(j x) {
-	if (*list > counter) {
-		(*list)[counter] = x;
+	if ((listSize - 1) > counter) {
+		list[counter] = x;
 		counter++;
+		printf("new");
 	}
 	else {
-		return;
+		listSize *= 2;
+		j* newBiggerList = new j[listSize];
+		for (int i = 0; i < counter; i++) {
+			newBiggerList[i] = list[i];
+		}
+		list = newBiggerList;
+		list[counter] = x;
+		counter++;
+		printf("hi");
 	}
 }
 
@@ -28,12 +38,16 @@ int DynamicList<j>::length() {
 }
 
 template <class j>
-void DynamicList<j>::remove(j y) {
-	for (int c = 0; c < counter; c++) {
-		if (*list[c] == y) {
-			*list[c] = "";
-		}
+void DynamicList<j>::remove(int y) {
+	counter--;
+	for (int c = y; c < counter; c++) {
+		list[y] = list[y + 1];
 	}
+}
+
+template <class j>
+int DynamicList<j>::get(int i) {
+	return list[i];
 }
 
 
