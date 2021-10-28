@@ -10,14 +10,6 @@ using namespace std;
 
 int main()
 {
-	/**int* array = new int[3];
-	array[0] = 10;
-	array[1] = 5;
-	array[2] = 6;
-
-	int size = (sizeof(array) / sizeof(int)); 
-
-	cout << array << endl; **/
 
 	DynamicList<int> object;
 
