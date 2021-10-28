@@ -34,8 +34,9 @@ int main()
 	object.push(25);
 	object.push(30);
 	object.push(35);
-	object.push(40);
+	object.push(40); 
 
+	// ERROR: remove function removes 10 but replaces it with 15, also messes up array so it won't print out 40(possibly because it the terms don't actually move over a spot)
 	object.remove(1);
 
 	object.push(45);
