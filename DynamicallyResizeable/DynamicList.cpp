@@ -17,7 +17,6 @@ void DynamicList<j>::push(j x) {
 	if ((listSize - 1) > counter) {
 		list[counter] = x;
 		counter++;
-		printf("new");
 	}
 	else {
 		listSize *= 2;
@@ -28,21 +27,12 @@ void DynamicList<j>::push(j x) {
 		list = newBiggerList;
 		list[counter] = x;
 		counter++;
-		printf("hi");
 	}
 }
 
 template <class j>
 int DynamicList<j>::length() {
 	return counter;
-}
-
-template <class j>
-void DynamicList<j>::remove(int y) {
-	counter--;
-	for (int c = y; c < counter; c++) {
-		list[y] = list[y + 1];
-	}
 }
 
 template <class j>
