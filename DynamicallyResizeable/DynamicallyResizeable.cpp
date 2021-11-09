@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <Windows.h>
 #include "DynamicList.h"
-#include "DynamicList.cpp"
 
 using namespace std;
 
